@@ -8,7 +8,7 @@ document.querySelector('#randomizer-button').addEventListener('click', () => {
   let attackerPlayers = []
   let defendersPlayers = []
   randomizedPlayers = []
-  
+
   // Pegar o input.value(os nomes escritos no textarea)
   const players = document.querySelector('#randomizer-area').value.split('\n')
   const max = players.length
@@ -19,7 +19,6 @@ document.querySelector('#randomizer-button').addEventListener('click', () => {
     while (randomizedPlayers.indexOf(players[j]) != -1) {
       j = numeroAleatorio(max)
     }
-
     randomizedPlayers.push(players[j])
   }
 
@@ -34,8 +33,7 @@ document.querySelector('#randomizer-button').addEventListener('click', () => {
   updatePlayerNames(attackerPlayers, defendersPlayers)
 })
 
-
-// Adicionar os nomes sorteador na tabela de attackers and defenders
+// Adicionar os nomes sorteados na tabela de attackers and defenders
 function updatePlayerNames(attackerPlayers, defendersPlayers) {
   const playerAttack = document.querySelectorAll('.player-attack')
   const playerDefender = document.querySelectorAll('.player-defense')
