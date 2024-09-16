@@ -88,3 +88,27 @@ body {
 .player-defense {
   background-color: var(--teal-600);
 }
+
+@media (max-width: 669px) {
+
+  #randomizer-area {
+    width: 75%;
+    font-size: 18px;
+  }
+
+  #randomizer-button {
+    font-size: 17px;
+  }
+
+  .teammate-table {
+    width: 90%;
+  }
+
+  .teammate-table td {
+    max-width: 150px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+}
