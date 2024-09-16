@@ -35,7 +35,6 @@ document.querySelector('#randomizer-button').addEventListener('click', () => {
 })
 
 
-
 // Adicionar os nomes sorteador na tabela de attackers and defenders
 function updatePlayerNames(attackerPlayers, defendersPlayers) {
   const playerAttack = document.querySelectorAll('.player-attack')

@@ -66,6 +66,10 @@ body {
   margin-top: 10em;
 }
 
+.teammate-table td {
+  width: 50%;
+}
+
 .teammate-table th,
 .teammate-table td {
   padding: 8px;
