@@ -20,8 +20,14 @@
 
 body {
   background-color: #18181b;
+  background-position: center center;
+  background-size: cover;
+  background-position-y: 0px;
+  background-repeat: no-repeat;
+  transition: 0.3s;
   height: 100vh;
   width: 100vw;
+  position: relative;
 }
 
 .container {
@@ -29,6 +35,13 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
+}
+
+#randomizer-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
   align-items: center;
 }
 
@@ -42,7 +55,7 @@ body {
   height: 240px;
   padding: 10px;
   transition: 0.3s;
-  font-size: 15 px;
+  font-size: 15px;
 }
 
 #randomizer-area:focus {
@@ -61,9 +74,121 @@ body {
   transition: 0.3s;
 }
 
-#randomizer-button:hover {
+#randomizer-button:hover,
+.btn-md-area button:hover,
+.submit-btn:hover,
+#confirm-btn:hover,
+#home-btn:hover {
   background-color: var(--red-700);
 }
+
+/* Maps area */
+
+#picksAndBans-container {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#home-btn {
+  position: absolute;
+  top: 3%;
+  left: 2%;
+  width: 30px;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  cursor: pointer;
+  background-color: var(--red-500);
+  padding: 5px;
+  transition: 0.3s;
+}
+
+.btn-md-area {
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  position: absolute;
+  top: 3%;
+}
+
+.btn-md-area button {
+  width: 5%;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  cursor: pointer;
+  background-color: var(--red-500);
+  padding: 5px;
+  transition: 0.3s;
+}
+
+#banPick-phase {
+  text-transform: uppercase;
+}
+
+#maps-area {
+  display: flex;
+  justify-content: center;
+  margin-top: 2em;
+  gap: 2px;
+}
+
+.map-container {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.map-container img {
+  width: 140px;
+  height: 100px;
+  transition: 0.3s;
+}
+
+[data-map]:hover {
+  filter: brightness(0.7);
+}
+
+
+.pick::after {
+  content: "✓";
+  color: #00ff00;
+  font-size: 40px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+}
+
+
+.ban::after {
+  content: "X";
+  color: #ff0000;
+  font-size: 40px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+}
+
+.submit-btn {
+  margin-top: 2em;
+  width: 15%;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  cursor: pointer;
+  background-color: var(--red-500);
+  padding: 8px;
+  transition: 0.3s;
+}
+
 
 .teammate-table {
   width: 50%;
@@ -87,6 +212,18 @@ body {
 
 .player-defense {
   background-color: var(--teal-600);
+}
+
+#confirm-btn {
+  margin-top: 40px;
+  width: 10%;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  cursor: pointer;
+  background-color: var(--red-500);
+  padding: 8px;
+  transition: 0.3s;
 }
 
 @media (max-width: 669px) {
