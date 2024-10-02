@@ -39,6 +39,10 @@ document.querySelector('#randomizer-button').addEventListener('click', () => {
 });
 
 
+document.querySelector('#home-btn').addEventListener('click', () => {
+  window.location.reload()
+})
+
 function updateBodyBackgroundPick(map) {
   const mapName = map.getAttribute('data-map')
   document.body.style.background = `url(img/${mapName}.webp)`
